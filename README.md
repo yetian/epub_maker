@@ -32,10 +32,10 @@ pip install EbookLib charset-normalizer chardet
 
 ```bash
 # 基本用法，输出为同名 .epub
-python3 txt2epub.py "長生十萬年.txt"
+python3 txt2epub.py example.txt
 
 # 指定输出路径与作者
-python3 txt2epub.py input.txt -o output.epub --author "夏山河"
+python3 txt2epub.py input.txt -o output.epub --author "佚名"
 
 # 强制指定输入编码（跳过自动检测）
 python3 txt2epub.py input.txt -e gb18030
@@ -44,7 +44,7 @@ python3 txt2epub.py input.txt -e gb18030
 python3 txt2epub.py input.txt --no-interactive
 
 # 指定书名（默认取文件名）
-python3 txt2epub.py input.txt --title "长生十万年"
+python3 txt2epub.py input.txt --title "示例小说"
 ```
 
 ### 参数
@@ -72,8 +72,15 @@ python3 txt2epub.py input.txt --title "长生十万年"
 
 ```
 txt2epub.py   # 主脚本：编码检测 / 章节切分 / EPUB 生成
+example.txt   # 示例文本，演示前言、序章、楔子、数字章节等格式
 ```
 
 ## 备注
 
-生成的 EPUB 已在《長生十萬年》样本上测试通过（857 章，含目录）。
+仓库附带 `example.txt`，可直接运行：
+
+```bash
+python3 txt2epub.py example.txt --no-interactive
+```
+
+示例会生成 7 个章节，包括自动归入「标题」的前言部分。

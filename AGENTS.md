@@ -26,7 +26,7 @@ pip install EbookLib charset-normalizer chardet
 python3 -m py_compile txt2epub.py
 
 # Run on the sample file (writes EPUB next to input)
-python3 txt2epub.py "長生十萬年.txt" --no-interactive
+python3 txt2epub.py example.txt --no-interactive
 
 # Force an encoding
 python3 txt2epub.py input.txt -e gb18030
@@ -59,3 +59,5 @@ script against a real TXT file and checking:
 - Do not commit generated `.epub` files, `__pycache__`, or the sample novel.
 - EPUB content must stay UTF-8; never write decoded text back to disk in a
   legacy encoding.
+- Commit every change after finishing a task; do not leave modifications
+  uncommitted.
